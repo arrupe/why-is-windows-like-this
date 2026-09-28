@@ -1,0 +1,30 @@
+logman create counter "Slow PC Investigation" ^
+-si 00:00:03 ^
+-o "C:\PerfLogs\SlowPC\SlowPC" ^
+-v mmddhhmm ^
+-f bin ^
+-max 1024 ^
+-c "\Processor(_Total)\% Processor Time" ^
+-c "\Processor(_Total)\% Privileged Time" ^
+-c "\Processor Information(_Total)\% Processor Performance" ^
+-c "\System\Processor Queue Length" ^
+-c "\System\Context Switches/sec" ^
+-c "\Memory\Available MBytes" ^
+-c "\Memory\Pages/sec" ^
+-c "\Memory\Page Faults/sec" ^
+-c "\Memory\Committed Bytes" ^
+-c "\PhysicalDisk(_Total)\% Disk Time" ^
+-c "\PhysicalDisk(_Total)\Avg. Disk Queue Length" ^
+-c "\PhysicalDisk(_Total)\Avg. Disk sec/Read" ^
+-c "\PhysicalDisk(_Total)\Avg. Disk sec/Write" ^
+-c "\PhysicalDisk(_Total)\Disk Reads/sec" ^
+-c "\PhysicalDisk(_Total)\Disk Writes/sec" ^
+-c "\LogicalDisk(_Total)\% Free Space" ^
+-c "\LogicalDisk(_Total)\Free Megabytes" ^
+-c "\Network Interface(*)\Bytes Total/sec" ^
+-c "\TCPv4\Connections Established" ^
+-c "\TCPv4\Segments Retransmitted/sec" ^
+-c "\Process(*)\% Processor Time" ^
+-c "\Process(*)\Private Bytes" ^
+-c "\Process(*)\Working Set" ^
+-c "\Process(*)\IO Data Bytes/sec"
